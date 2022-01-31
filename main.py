@@ -12,7 +12,7 @@ directories = {
 }
 
 
-def search_name(user_input, docs):
+def search_name(user_input, docs=documents):
     # user_input = input('Введите номер документа: ')
     for people in docs:
         if user_input == people['number']:
@@ -21,7 +21,7 @@ def search_name(user_input, docs):
         return 'Такого документа нет'
 
 
-def search_shelf(user_input, direct):
+def search_shelf(user_input, direct=directories):
     # user_input = input('Введите номер документа: ')
     for key, value in direct.items():
         for number in value:
@@ -38,7 +38,7 @@ def print_data(docs):
     return el_str
 
 
-def add_new_doc(docs, direct, type_doc, number_doc, name, shelf):
+def add_new_doc(number_doc, shelf, docs=documents, direct=directories, type_doc='passport', name='Anton'):
     # type_doc = input('Введите тип документа: ')
     # number_doc = input('Введите номер документа: ')
     for data in docs:
