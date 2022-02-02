@@ -1,5 +1,5 @@
 import pytest
-from main import search_shelf, search_name, add_new_doc
+from accounting import search_shelf, search_name, add_new_doc
 
 TEST_DATA = [
     ('2207 876234', 'Василий Пупкин', 'Полка № 1'),
@@ -15,7 +15,7 @@ TEST_DATA_1 = [
 ]
 
 
-class TestPytest:
+class TestAccounting:
 
     @pytest.mark.parametrize('user_input, expected_result, expected_result_1', TEST_DATA)
     def test_search_name(self, user_input, expected_result, expected_result_1):
